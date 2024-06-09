@@ -1,25 +1,59 @@
-let water = "300ml of water,"
-let eggs = "3 eggs,"
-let yeast = "7 tea spoons of yeast,"
-let salt = "1 spoon of salt."
-let flour = "490gr of flour,"
-let mass = "To make the mass we must mix: "
+import { pizzas } from "./pizzas.js";
 
-let ingredients = ["Salsa de tomate", " Mozzarella"];
+const eggs = "3 eggs,";
+const yeast = "7 tea spoons of yeast,";
+const salt = "1 spoon of salt.";
+const flour = "490gr of flour,";
+const mass = "To make the mass we must mix: ";
+const water = "300ml of water,";
 
-function makeDough(){
-    let mixedMass = mass + eggs + " " + flour + " " + water + " and " + salt;
-    return mixedMass;
-}
- 
-function addToDough(){
-    let addedIngredients = "Now we must add to the mass: " + ingredients;
-    return addedIngredients;
-}
+const ingredients = [" Tomato sauce", " Mozzarella", " Pepperoni", "Olives"];
 
-function bake(){
+let olivesQuantity = 4;
+let bakeTime = 10;
 
+function makeDough() {
+  let mixedMass =
+    mass + eggs + " " + yeast + " " + flour + " " + water + " and " + salt;
+  return mixedMass;
 }
 
-console.log(makeDough());
-console.log(addToDough());
+// function addToDough(){
+//     let addedIngredients = "Now we must add to the mass: " + ingredients;
+//     return addedIngredients;
+// }
+
+function addIngredients(ingredients, olivesQuantity) {
+  ingredients.forEach((ingredient) => {
+    if (ingredient === "Olives") {
+      if (olivesQuantity > 1) {
+        console.log("Add " + olivesQuantity + " " + ingredient);
+      } else {
+        console.log("No olives pizza " + ingredient);
+      }
+    } else {
+      console.log("Add" + ingredient);
+    }
+  });
+}
+
+function bake() {
+  console.log("Bake pizza for: " + bakeTime + " min");
+  console.log("Pizza ready!");
+}
+
+export function makePizza() {
+  console.log(makeDough());
+  console.log("let the dough rest for 45 min");
+  addIngredients(ingredients, olivesQuantity);
+  bake();
+  deliverOrder();
+}
+
+export function deliverOrder() {
+  console.log("Pizza Delivered");
+}
+
+// console.log(makeDough());
+// addIngredients(ingredients, olivesQuantity);
+// bake()
