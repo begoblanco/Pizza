@@ -9,7 +9,7 @@ Allows the user to choose between pizzas and choose the number of olives desired
 Output:<br>
 And your pizza is... : (pepperoni, margarita or hawaiian)  <i>(((pizza name)))</i> <br>
 How many olives do you want?: <i>(((number)))</i> <br>
-Pizza hawaiian in preparation <br>
+Pizza <i>(((pizza name)))</i> in preparation <br>
 To make the mass we must mix: 3 eggs, 7 tea spoons of yeast, 490gr of flour, 300ml of water, and 1 spoon of salt. <br>
 let the dough rest for 45 min <br>
 <i>(((ingredients for the chosen pizza)))</i> <br>
