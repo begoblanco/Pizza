@@ -1,10 +1,14 @@
 export const pizzas = [
   {
     name: "pepperoni",
-    ingredients: ["tomato", "mozzarella", "pepperoni"],
+    ingredients: [" Tomato sauce", " Mozzarella", " Pepperoni"],
   },
   {
     name: "margarita",
-    ingredients: ["tomato", "mozzarella", "Emmental"],
+    ingredients: [" Tomato sauce", " Mozzarella", " Emmental"],
+  },
+  {
+    name: "hawaiian",
+    ingredients: [" Tomato sauce", " Mozzarella", " Ham", " Pineapple"],
   },
 ];

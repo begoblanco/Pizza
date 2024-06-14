@@ -1,5 +1,3 @@
-import { pizzas } from "./pizzas.js";
-
 const eggs = "3 eggs,";
 const yeast = "7 tea spoons of yeast,";
 const salt = "1 spoon of salt.";
@@ -7,9 +5,9 @@ const flour = "490gr of flour,";
 const mass = "To make the mass we must mix: ";
 const water = "300ml of water,";
 
-const ingredients = [" Tomato sauce", " Mozzarella", " Pepperoni", "Olives"];
+//const ingredients = [" Tomato sauce", " Mozzarella", " Pepperoni", "Olives"];
 
-let olivesQuantity = 4;
+//let olivesQuantity = 4;
 let bakeTime = 10;
 
 function makeDough() {
@@ -18,15 +16,10 @@ function makeDough() {
   return mixedMass;
 }
 
-// function addToDough(){
-//     let addedIngredients = "Now we must add to the mass: " + ingredients;
-//     return addedIngredients;
-// }
-
 function addIngredients(ingredients, olivesQuantity) {
   ingredients.forEach((ingredient) => {
     if (ingredient === "Olives") {
-      if (olivesQuantity > 1) {
+      if (olivesQuantity >= 1) {
         console.log("Add " + olivesQuantity + " " + ingredient);
       } else {
         console.log("No olives pizza " + ingredient);
@@ -37,17 +30,17 @@ function addIngredients(ingredients, olivesQuantity) {
   });
 }
 
-function bake() {
-  console.log("Bake pizza for: " + bakeTime + " min");
-  console.log("Pizza ready!");
-}
-
-export function makePizza() {
+export function makePizza(ingredients, olivesQuantity) {
   console.log(makeDough());
   console.log("let the dough rest for 45 min");
   addIngredients(ingredients, olivesQuantity);
-  bake();
-  deliverOrder();
+  //bake();
+  //deliverOrder();
+}
+
+export function bake() {
+  console.log("Bake pizza for: " + bakeTime + " min");
+  console.log("Pizza ready!");
 }
 
 export function deliverOrder() {
